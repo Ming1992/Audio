@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0iC-Ny-qAK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="juM-UF-I8H">
+            <objects>
+                <tableViewController storyboardIdentifier="RootTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vbf-LK-IVe" customClass="RootTableViewController" customModule="AudioAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qgN-F4-1jX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="0Vh-Jl-YeA">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Vh-Jl-YeA" id="WyK-8y-Quu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="2py-g6-Xd4" kind="custom" identifier="" customClass="KKStoryboardSegue" customModule="AudioAssistant" customModuleProvider="target" id="Dvx-tP-wfk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vbf-LK-IVe" id="Qk2-gT-9bn"/>
+                            <outlet property="delegate" destination="vbf-LK-IVe" id="oWr-07-AzH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="b0s-1P-3xu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcJ-2r-EtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="104"/>
+        </scene>
+        <!--Sound Recording View Controller-->
+        <scene sceneID="U7z-34-Rj2">
+            <objects>
+                <viewController storyboardIdentifier="SoundRecordingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2py-g6-Xd4" customClass="SoundRecordingViewController" customModule="AudioAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xJr-td-VSo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N1P-G1-9cF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordTableViewCell" id="0Gs-ig-xSJ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Gs-ig-xSJ" id="IBb-48-YTY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2py-g6-Xd4" id="U6I-29-Ens"/>
+                                    <outlet property="delegate" destination="2py-g6-Xd4" id="F8E-oc-c5o"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiU-8C-ZfF">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzE-ND-xdI">
+                                        <rect key="frame" x="20" y="5" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="1" alpha="0.98295697770000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="录音"/>
+                                        <connections>
+                                            <action selector="action_startRecording" destination="2py-g6-Xd4" eventType="touchDown" id="TAc-dM-Bn7"/>
+                                            <action selector="action_stopRecording" destination="2py-g6-Xd4" eventType="touchUpInside" id="d8r-kw-dXT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xzE-ND-xdI" firstAttribute="top" secondItem="hiU-8C-ZfF" secondAttribute="top" constant="5" id="5GK-3T-OJk"/>
+                                    <constraint firstItem="xzE-ND-xdI" firstAttribute="leading" secondItem="hiU-8C-ZfF" secondAttribute="leading" constant="20" id="Gie-2l-eUB"/>
+                                    <constraint firstAttribute="trailing" secondItem="xzE-ND-xdI" secondAttribute="trailing" constant="20" id="HgB-zw-4Gr"/>
+                                    <constraint firstAttribute="bottom" secondItem="xzE-ND-xdI" secondAttribute="bottom" constant="5" id="I6P-EX-rWm"/>
+                                    <constraint firstAttribute="height" constant="60" id="dAG-fT-oHe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fXv-s6-eJe"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fXv-s6-eJe" firstAttribute="trailing" secondItem="N1P-G1-9cF" secondAttribute="trailing" id="9O0-yd-uV4"/>
+                            <constraint firstItem="N1P-G1-9cF" firstAttribute="top" secondItem="fXv-s6-eJe" secondAttribute="top" id="BIa-Dj-sfM"/>
+                            <constraint firstItem="fXv-s6-eJe" firstAttribute="bottom" secondItem="N1P-G1-9cF" secondAttribute="bottom" constant="60" id="Dao-Ed-Kio"/>
+                            <constraint firstItem="N1P-G1-9cF" firstAttribute="leading" secondItem="fXv-s6-eJe" secondAttribute="leading" id="Qho-Dz-gbT"/>
+                            <constraint firstItem="hiU-8C-ZfF" firstAttribute="bottom" secondItem="fXv-s6-eJe" secondAttribute="bottom" id="Sk0-Cw-tsn"/>
+                            <constraint firstItem="fXv-s6-eJe" firstAttribute="trailing" secondItem="hiU-8C-ZfF" secondAttribute="trailing" id="c8W-br-uvQ"/>
+                            <constraint firstItem="hiU-8C-ZfF" firstAttribute="leading" secondItem="fXv-s6-eJe" secondAttribute="leading" id="oCz-5g-Rhj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn_record" destination="xzE-ND-xdI" id="ZM1-pT-Twf"/>
+                        <outlet property="tableView" destination="N1P-G1-9cF" id="lBC-s2-zMF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xaD-gk-DC1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418.84057971014494" y="1119.6428571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zPo-2Z-MNs">
+            <objects>
+                <navigationController id="0iC-Ny-qAK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sZZ-X8-zew">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vbf-LK-IVe" kind="relationship" relationship="rootViewController" id="zta-VB-fq8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdk-uY-cy0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-470" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
